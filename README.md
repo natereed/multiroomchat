@@ -1,11 +1,24 @@
-# Build A Group-Chat App in 30 Lines Using Node.js
+# Node Group Chat Widget
 
-A simple and (hopefully) to-the-point tutorial to build your first group-chat application using Node.js in less than 30 lines of code.
+Node Group Chat Widget with support for multiple rooms.
 
 ## Running the program
 
-Run the program by using
+Run the app using:
 
 ```shell
 $ node index.js
 ```
+
+## How to use the chat widget
+
+To get the chatroom, pass a room id:
+
+Get chatroom:
+
+```GET /room/{id}```
+
+That's all that is needed to open a chatroom. It can be opened in a new browser window,
+a div, an iframe, etc.
+
+
