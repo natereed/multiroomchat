@@ -22,12 +22,12 @@ io.sockets.on('connection', function(socket) {
         socket.roomId = roomId;
         // Join room here:
         socket.join(roomId);
-        io.to(roomId).emit('is_online', '🔵 <i>' + socket.username + ' joined ' + roomId + '.</i>');
+        io.to(roomId).emit('is_online', '<i>' + socket.username + ' joined ' + roomId + '.</i>');
     });
 
     socket.on('disconnect', function(username) {
         // Should the room id come from socket or from the emitted message (function arg)?
-        io.to(socket.roomId).emit('is_online', '🔴 <i>' + socket.username + ' left ' + socket.roomId + '.</i>');
+        io.to(socket.roomId).emit('is_online', '<i>' + socket.username + ' left ' + socket.roomId + '.</i>');
         // Leave room
         socket.leave(socket.roomId);
     })
