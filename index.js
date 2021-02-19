@@ -33,7 +33,7 @@ io.sockets.on('connection', function(socket) {
     })
 
     socket.on('chat_message', function(message) {
-        io.to(socket.roomId).emit('chat_message', '<strong>' + socket.username + '</strong>: ' + message);
+        io.to(socket.roomId).emit('chat_message', '<span class="gravatar">👽</span><div class="chat_msg">' + socket.username + '</strong>: ' + message + '</div>');
     });
 
 });
